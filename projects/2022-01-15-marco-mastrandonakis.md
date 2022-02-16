@@ -7,7 +7,7 @@ background: "#B9BDBE"
 ---
 
 # Marco Mastrandonakis - Cirurgião Plástico
-![Site Penalty](https://image.prntscr.com/image/pXqviQG6QTaaWwidOcIjGw.png)
+![Site Penalty](/assets/img/marco-mastrandonakis.png)
 
 ### Descrição:
 Esse projeto foi desenvolvido para auxiliar a prospecção de novos clientes para o Dr. Marco Mastrandonakis.

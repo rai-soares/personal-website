@@ -13,7 +13,11 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Seo />
+      <Seo 
+        title={post.frontformatter.title}
+        description={post.frontformatter.description}
+        image={post.frontformatter.image}
+      />
       <MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </MainContent>

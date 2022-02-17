@@ -4,13 +4,14 @@ module.exports = {
     position: `Software Engineer`,
     description: `Desenvolvedor de software especialista em frontend.`,
     author: `Raí Soares`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://www.raisoares.me`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

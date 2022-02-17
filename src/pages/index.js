@@ -33,7 +33,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Meus projetos" description={"Raí Soares - Software Engineer especialista em frontend."} />
       <ListWrapper>
         {postList.map(
           ({

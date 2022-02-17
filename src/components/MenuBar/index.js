@@ -6,6 +6,7 @@ import { UpArrowAlt as Arrow } from '@styled-icons/boxicons-regular/UpArrowAlt'
 import { Bulb as Light } from '@styled-icons/boxicons-regular/Bulb'
 import { Grid } from '@styled-icons/boxicons-solid/Grid'
 import { ThList as List } from "@styled-icons/typicons/ThList"
+import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styles"
 
@@ -24,14 +25,16 @@ const MenuBar = () => {
 
   return <S.MenuBarWrapper>
     <S.MenuBarGroup>
-      <S.MenuBarLink to="/" title="Voltar para Home">
+      <S.MenuBarLink
+        to="/"
+        cover
+        direction="right"
+        bg={getThemeColor()}
+        duration={0.6}
+        title="Voltar para Home"
+      >
         <S.MenuBarItem>
           <Home />
-        </S.MenuBarItem>
-      </S.MenuBarLink>
-      <S.MenuBarLink to="/search/" title="Pesquisar">
-        <S.MenuBarItem>
-          <Search />
         </S.MenuBarItem>
       </S.MenuBarLink>
     </S.MenuBarGroup>
@@ -44,7 +47,7 @@ const MenuBar = () => {
       <S.MenuBarItem title="Mudar visualização" onClick={() => {
         window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
       }}
-      className="display">
+        className="display">
         {isListMode ?
           <Grid />
           :

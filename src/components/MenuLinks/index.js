@@ -1,15 +1,15 @@
 import React from "react"
 
 import links from "./content"
-
-import {MenuLinksWrapper, MenuLinksList, MenuLinksItem, MenuLinksLink} from "./styles"
+import getThemeColor from "../../utils/getThemeColor"
+import { MenuLinksWrapper, MenuLinksList, MenuLinksItem, MenuLinksLink } from "./styles"
 
 const MenuLinks = () => (
   <MenuLinksWrapper>
     <MenuLinksList>
       {links.map((link, i) => (
         <MenuLinksItem key={i}>
-          <MenuLinksLink to={link.url} activeClassName="active">
+          <MenuLinksLink cover direction="left" bg={getThemeColor()} duration={0.6} to={link.url} activeClassName="active">
             {link.label}
           </MenuLinksLink>
         </MenuLinksItem>

@@ -3,6 +3,7 @@ import React from "react"
 import * as S from "./styles"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import getThemeColor from "../../utils/getThemeColor"
 
 const ProjectItem = ({
     slug,
@@ -13,7 +14,7 @@ const ProjectItem = ({
     title,
     description,
 }) => (
-    <S.PostItemLink to={slug}>
+    <S.PostItemLink to={slug} cover direction="right" duration={0.6} bg={getThemeColor()}>
         <S.PostItemWrapper>
             <S.PostItemTag background={background}>{category}</S.PostItemTag>
             <S.PostItemInfo>

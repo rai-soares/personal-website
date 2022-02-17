@@ -10,13 +10,14 @@ const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
+  console.log(post)
 
   return (
     <Layout>
       <Seo 
-        title={post.frontformatter.title}
-        description={post.frontformatter.description}
-        image={post.frontformatter.image}
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image={post.frontmatter.image}
       />
       <MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>

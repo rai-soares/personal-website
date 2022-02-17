@@ -2,31 +2,25 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
-import * as S from "../components/Post/styles"
+import { MainContent } from "../components/ProjectPost/styles"
 import RecommendedPosts from '../components/RecommendedPosts'
 import Comments from '../components/Comments'
 
 const BlogPost = ({ data, pageContext }) => {
-    const post = data.markdownRemark
-    const next = pageContext.nextPost
-    const previous = pageContext.previousPost
+  const post = data.markdownRemark
+  const next = pageContext.nextPost
+  const previous = pageContext.previousPost
 
-    return (
-        <Layout>
-            <Seo />
-            <h1>Title: {post.frontmatter.title}</h1>
-            <S.PostHeader>
-                <S.PostDate>
-                    {post.frontmatter.date} • {post.timeToRead} min de leitura
-                </S.PostDate>
-            </S.PostHeader>
-            <S.MainContent>
-                <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-            </S.MainContent>
-            <RecommendedPosts next={next} previous={previous} />
-            <Comments url={post.fields.slug} title={post.frontmatter.title}/>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <Seo />
+      <MainContent>
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      </MainContent>
+      <RecommendedPosts next={next} previous={previous} />
+      <Comments url={post.fields.slug} title={post.frontmatter.title} />
+    </Layout>
+  )
 }
 
 export const query = graphql`

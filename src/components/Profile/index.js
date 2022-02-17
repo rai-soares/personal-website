@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Avatar from '../Avatar'
 import { ProfileAuthor, ProfileDescription, ProfileLink, ProfilePosition, ProfileWrapper } from './styles'
 import getThemeColor from "../../utils/getThemeColor"
+
 const Profile = () => {
   const {
     site: {

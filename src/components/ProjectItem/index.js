@@ -1,8 +1,7 @@
 import React from "react"
 
-import * as S from "./styles"
+import { PostItemLink, PostItemWrapper, PostItemTag, PostItemInfo, PostItemDate, PostItemDescription, PostItemTitle } from "./styles"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import getThemeColor from "../../utils/getThemeColor"
 
 const ProjectItem = ({
@@ -14,18 +13,18 @@ const ProjectItem = ({
     title,
     description,
 }) => (
-    <S.PostItemLink to={slug} cover direction="right" duration={0.6} bg={getThemeColor()}>
-        <S.PostItemWrapper>
-            <S.PostItemTag background={background}>{category}</S.PostItemTag>
-            <S.PostItemInfo>
-                <S.PostItemDate>
+    <PostItemLink to={slug} cover direction="right" duration={0.6} bg={getThemeColor()}>
+        <PostItemWrapper>
+            <PostItemTag background={background}>{category}</PostItemTag>
+            <PostItemInfo>
+                <PostItemDate>
                     {date} • {timeToRead} min de leitura
-                </S.PostItemDate>
-                <S.PostItemTitle>{title}</S.PostItemTitle>
-                <S.PostItemDescription>{description}</S.PostItemDescription>
-            </S.PostItemInfo>
-        </S.PostItemWrapper>
-    </S.PostItemLink>
+                </PostItemDate>
+                <PostItemTitle>{title}</PostItemTitle>
+                <PostItemDescription>{description}</PostItemDescription>
+            </PostItemInfo>
+        </PostItemWrapper>
+    </PostItemLink>
 )
 
 ProjectItem.propTypes = {

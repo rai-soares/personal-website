@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react"
 
 import { Home } from '@styled-icons/boxicons-solid/Home'
-import { SearchAlt2 as Search } from '@styled-icons/boxicons-regular/SearchAlt2'
 import { UpArrowAlt as Arrow } from '@styled-icons/boxicons-regular/UpArrowAlt'
 import { Bulb as Light } from '@styled-icons/boxicons-regular/Bulb'
 import { Grid } from '@styled-icons/boxicons-solid/Grid'
 import { ThList as List } from "@styled-icons/typicons/ThList"
 import getThemeColor from "../../utils/getThemeColor"
 
-import * as S from "./styles"
+import { MenuBarWrapper, MenuBarGroup, MenuBarItem, MenuBarLink } from "./styles"
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
@@ -23,9 +22,9 @@ const MenuBar = () => {
     window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
 
-  return <S.MenuBarWrapper>
-    <S.MenuBarGroup>
-      <S.MenuBarLink
+  return <MenuBarWrapper>
+    <MenuBarGroup>
+      <MenuBarLink
         to="/"
         cover
         direction="right"
@@ -33,18 +32,18 @@ const MenuBar = () => {
         duration={0.6}
         title="Voltar para Home"
       >
-        <S.MenuBarItem>
+        <MenuBarItem>
           <Home />
-        </S.MenuBarItem>
-      </S.MenuBarLink>
-    </S.MenuBarGroup>
-    <S.MenuBarGroup>
-      <S.MenuBarItem className={theme} title="Mudar o tema" onClick={() => {
+        </MenuBarItem>
+      </MenuBarLink>
+    </MenuBarGroup>
+    <MenuBarGroup>
+      <MenuBarItem className={theme} title="Mudar o tema" onClick={() => {
         window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
       }}>
         <Light />
-      </S.MenuBarItem>
-      <S.MenuBarItem title="Mudar visualização" onClick={() => {
+      </MenuBarItem>
+      <MenuBarItem title="Mudar visualização" onClick={() => {
         window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
       }}
         className="display">
@@ -53,12 +52,12 @@ const MenuBar = () => {
           :
           <List />
         }
-      </S.MenuBarItem>
-      <S.MenuBarItem title="Ir para o Topo">
+      </MenuBarItem>
+      <MenuBarItem title="Ir para o Topo">
         <Arrow />
-      </S.MenuBarItem>
-    </S.MenuBarGroup>
-  </S.MenuBarWrapper>
+      </MenuBarItem>
+    </MenuBarGroup>
+  </MenuBarWrapper>
 }
 
 export default MenuBar

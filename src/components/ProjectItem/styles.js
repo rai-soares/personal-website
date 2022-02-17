@@ -14,12 +14,6 @@ export const PostItemLink = styled(AniLink)`
   &:hover {
     color: var(--highlight);
   }
-
-  ${media.lessThan("large")`
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 2rem 1rem;
-  `}
 `
 
 export const PostItemWrapper = styled.section`
@@ -35,6 +29,12 @@ export const PostItemWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
   }
+
+  ${media.lessThan("large")`
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  `}
 `
 
 export const PostItemTag = styled.div`

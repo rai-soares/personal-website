@@ -28,16 +28,20 @@ export const RecommendedLink = styled(AniLink)`
   &:hover {
     background: var(--borders);
   }
+
   &.previous {
     border-right: 1px solid var(--borders);
   }
+
   &.next {
     justify-content: flex-end;
   }
+
   &.previous:before {
     content: "\\2190";
     margin-right: 0.5rem;
   }
+  
   &.next:after {
     content: "\\2192";
     margin-left: 0.5rem;

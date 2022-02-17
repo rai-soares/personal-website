@@ -18,7 +18,7 @@ const BlogPost = ({ data, pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </MainContent>
       <RecommendedPosts next={next} previous={previous} />
-      <Comments url={post.fields.slug} title={post.frontmatter.title} />
+      {/* <Comments url={post.fields.slug} title={post.frontmatter.title} /> */}
     </Layout>
   )
 }

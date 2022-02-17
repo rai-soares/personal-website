@@ -2,21 +2,20 @@ import React from "react"
 import PropTypes from "prop-types"
 import ReactDisqusComments from "react-disqus-comments"
 
-import * as S from "./styles"
+import { CommentsWrapper, CommentsTitle } from "./styles"
 
 const Comments = ({ url, title }) => {
-  const completeURL = `https://raisoares.dev${url}`
-
+  const completeURL = `https://www.raisoares.me${url}`
   return (
-    <S.CommentsWrapper>
-      <S.CommentsTitle>Comentários</S.CommentsTitle>
+    <CommentsWrapper>
+      <CommentsTitle>Comentários</CommentsTitle>
       <ReactDisqusComments
-        shortname="raisoares"
+        shortname="rai_soares_dev"
         identifier={completeURL}
         title={title}
         url={completeURL}
       />
-    </S.CommentsWrapper>
+    </CommentsWrapper>
   )
 }
 

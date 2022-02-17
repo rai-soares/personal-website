@@ -1,10 +1,10 @@
 import React from "react"
+import { TransitionPortal } from 'gatsby-plugin-transition-link'
 import PropTypes from "prop-types"
 import { LayoutWrapper, LayoutMain } from "./styles";
 import GlobalStyles from '../../styles/global'
 import Sidebar from "../Sidebar";
 import MenuBar from "../MenuBar"
-import {TransitionPortal} from 'gatsby-plugin-transition-link'
 
 const Layout = ({ children }) => {
   return (

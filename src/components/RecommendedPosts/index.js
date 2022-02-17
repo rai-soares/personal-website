@@ -1,12 +1,12 @@
 import React from "react"
 import propTypes from "prop-types"
-import * as S from "./styles"
+import {RecommendedWrapper, RecommendedLink} from "./styles"
 import getThemeColor from "../../utils/getThemeColor"
 
 const RecommendedPosts = ({ next, previous }) => (
-  <S.RecommendedWrapper>
+  <RecommendedWrapper>
     {previous && (
-      <S.RecommendedLink
+      <RecommendedLink
         to={previous.fields.slug}
         cover
         direction="left"
@@ -14,10 +14,10 @@ const RecommendedPosts = ({ next, previous }) => (
         className="previous"
       >
         {previous.frontmatter.title}
-      </S.RecommendedLink>
+      </RecommendedLink>
     )}
     {next && (
-      <S.RecommendedLink
+      <RecommendedLink
         to={next.fields.slug}
         cover
         direction="right"
@@ -25,9 +25,9 @@ const RecommendedPosts = ({ next, previous }) => (
         className="next"
       >
         {next.frontmatter.title}
-      </S.RecommendedLink>
+      </RecommendedLink>
     )}
-  </S.RecommendedWrapper>
+  </RecommendedWrapper>
 )
 
 RecommendedPosts.propTypes = {

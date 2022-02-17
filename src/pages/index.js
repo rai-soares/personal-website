@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
 import ProjectItem from "../components/ProjectItem"
-import {ListWrapper} from "../components/ListWrapper/styles"
+import { ListWrapper } from "../components/ListWrapper/styles"
 
 const IndexPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -58,4 +58,5 @@ const IndexPage = () => {
     </Layout>
   )
 }
+
 export default IndexPage

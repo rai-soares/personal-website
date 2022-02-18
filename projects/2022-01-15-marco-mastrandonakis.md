@@ -3,7 +3,7 @@ date: 2022-01-15 00:00:01
 title: Marco Mastrandonakis - Cirurgião Plástico
 description: Esse projeto foi desenvolvido para auxiliar a prospecção...
 category: Web
-background: "#B9BDBE"
+background: "#6805af"
 ---
 
 # Marco Mastrandonakis - Cirurgião Plástico

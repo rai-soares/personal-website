@@ -6,8 +6,8 @@ category: WEB
 background: "#192734"
 ---
 
-# Blog Penalty
-![Site Penalty](/assets/img/blog-penalty.png)
+# Site pessoal
+![Site Penalty](/assets/img/site-pessoal.png)
 
 ### Descrição:
 Esse projeto foi desenvolvido para apresentar um pouco do meu portifólio de projetos.
